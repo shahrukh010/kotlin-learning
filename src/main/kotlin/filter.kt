@@ -23,9 +23,9 @@ fun main(strings:Array<String>){
 		println(it);
 	}
 
-	var user1 = User(1111,"annie");
-	var user2 = User(2222,"bridget");
-	var user3 = User(3333,"nic");
+	var user1 = Usr(1111,"annie");
+	var user2 = Usr(2222,"bridget");
+	var user3 = Usr(3333,"nic");
 
 	var customer1 = Customer(101,"hector");
 	var customer2 = Customer(102,"alex");
@@ -50,6 +50,6 @@ fun main(strings:Array<String>){
 	println(customer);
 }
 
-data class User(var id:Int,var name:String)
+data class Usr(var id:Int,var name:String)
 
 data class Customer(var id:Int,var name:String)

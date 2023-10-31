@@ -18,7 +18,7 @@ fun main(args: Array<String>) {
     println(product)
 
     //in this car Customer(...)object treating as properties not parameters because of if you see in Customer class var keyword are using but in Product treated as parameter
-    var customer = Customer(UUID.randomUUID().toString(), "Annie", "Hyderabad");
+    var customer = Customers(UUID.randomUUID().toString(), "Annie", "Hyderabad");
     println(customer);
 }
 
@@ -57,7 +57,7 @@ class Product(id: Int, name: String, description: String, amount: Double) {
 }
 
 //because of var it becomes propertes so no need to declare instance variable if you remove var then you have delcare instance variable also because of ttreated as constructor arrgument
-class Customer(var id: String, var name: String, var location: String) {
+class Customers(var id: String, var name: String, var location: String) {
 
     override fun toString(): String {
 
