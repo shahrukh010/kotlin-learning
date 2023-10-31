@@ -42,7 +42,7 @@ fun main(args: Array<String>){
 	//transformation.
 	
 	println("Transformation");
-	val numbers = setOf(1,2,3);
+	var numbers = setOf(1,2,3);
 	println(numbers.map{it * 3});
 
 	//zip
@@ -55,6 +55,30 @@ fun main(args: Array<String>){
 	animal = listOf("fox","bear","wolf");
 
 	println(color.zip(animal){col,animal -> "The ${animal.replaceFirstChar{it.uppercase()}} is $col"});
+
+
+	//list iterator.
+	var number = listOf("one","three","five","seven","nine","eleven");
+
+	var numberIterator = number.iterator();
+
+	while(numberIterator.hasNext()){
+
+		println(numberIterator.next());
+	}
+
+	//ranges and progressions.
+	println(1 in 1..4);
+
+	for(index in 1..10){
+		println(index);
+	}
+
+	for(index in 0..8 step 2){
+		println(index);
+	}
+	
+
 }
 
 data class User(var id:Int,var name:String)
