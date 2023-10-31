@@ -48,10 +48,13 @@ fun main(args: Array<String>){
 	//zip
 	println("ZIP");
 
-	val color = listOf("red","brown","yellow");
-	val animal = listOf("fox","cow","dog");
+	var color = listOf("red","brown","grey");
+	var animal = listOf("fox","cow","dog");
 	println(color zip animal);
 
+	animal = listOf("fox","bear","wolf");
+
+	println(color.zip(animal){col,animal -> "The ${animal.replaceFirstChar{it.uppercase()}} is $col"});
 }
 
 data class User(var id:Int,var name:String)
