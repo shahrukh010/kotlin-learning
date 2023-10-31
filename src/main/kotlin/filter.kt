@@ -40,6 +40,14 @@ fun main(strings:Array<String>){
 	user_customer.filterIsInstance<Customer>().forEach{
 		println(it);
 	}
+
+	var (match,rest) = numberList.partition{it.length<=3};
+	println(match);
+	println(rest);
+
+	var (user,customer) = user_customer.partition{it is User};
+	println(user);
+	println(customer);
 }
 
 data class User(var id:Int,var name:String)
